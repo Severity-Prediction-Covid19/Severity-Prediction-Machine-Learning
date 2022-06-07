@@ -76,3 +76,7 @@ gunicorn --bind 0.0.0.0:5000 main:app
 
 11. Now u can use this API Model, use the external IP Address on VM Instance for Run
 
+## Postman Test
+You can use Request GET Mehod and url '/' go to http://34.101.40.253/ and this result is C22-PS273 and You can request with Method POST and url '/predict' request to body with key 'data_file' and select file **validation_data.csv** for check this result go to http://34.101.40.253/predict. 
+![Postman test](https://user-images.githubusercontent.com/99069985/172362060-8930055a-3ebb-4344-a0e0-bfa8d0f67521.jpg)
+
