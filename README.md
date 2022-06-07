@@ -71,8 +71,10 @@ server {
 sudo /etc/init.d/nginx restart
 ```
 10. Change directory to folder repo and bind the Flask model **main.py** to the Gunicorn server.
+```bash
 cd Severity-Prediction-Machine-Learning
 gunicorn --bind 0.0.0.0:5000 main:app
+```
 
 11. Now u can use this API Model, use the external IP Address on VM Instance for Run
 
