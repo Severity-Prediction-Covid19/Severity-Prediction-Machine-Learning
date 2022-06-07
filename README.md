@@ -45,7 +45,7 @@ cd ..
 sudo apt-get install nginx-full
 sudo /etc/init.d/nginx start
 ```
-7. Congigure Nginx
+7. Configure Nginx
 ```bash
 # remove default configuration file
 sudo rm /etc/nginx/sites-enabled/default
