@@ -5,12 +5,13 @@ SureHealth is an app which has the purpose to optimize the self-diagnosis to be 
 
 ## Credits
 The dataset that we use for built model prediction is from kaggle [[Dataset]](https://www.kaggle.com/code/corneliustantius/covid-severity-prediction/data)
+
 Then our reference of the model is also from kaggle [[Reference]](https://www.kaggle.com/code/maragarcagirn/covid-19-recognition)
 
 These are some of the references we use Deploying an ML Model on Google Compute Engine by alara dirik [[Deployment To VM]](https://towardsdatascience.com/deploying-a-custom-ml-prediction-service-on-google-cloud-ae3be7e6d38f)
 
 ## Making Prediction Model
-    From the dataset there are 316800 row data and for this model we use 11 features in the form of symptoms and later will produce the output which is like severity categories in the form of none, mild, moderate and severe. For this model we use 202752 samples for training and 50688 for validation. For the general step is we do the preprocessing data which is to split data for training and validation of the model. After that we built the model with keras and tensorflow. Then the model will generate the new folder which has shown the variable that it can use in load_model and produce the output of prediction. After that we make a flask that is used as web server to try the prediction model in a way upload the validation data and will give the result of prediction. Then, we make main.py is for use as API that can be access by Cloud Computing path.
+From the dataset there are 316800 row data and for this model we use 11 features in the form of symptoms and later will produce the output which is like severity categories in the form of none, mild, moderate and severe. For the general step is we do the preprocessing data which is to split data for training and validation of the model. In this model we use 202752 samples for training and 50688 for validation.  After that we built the model with keras and tensorflow. Then the model will generate the new folder which has shown the variable that it can use in load_model and produce the output of prediction. After that we make a flask that is used as web server to try the prediction model in a way upload the validation data and will give the result of prediction. Then, we make main.py is for use as API that can be access by Cloud Computing path.
 
 ## Step Deploy To GCP 
 1. First Go to VPC Network > Firewall Rules > Ip Ranges Source 0.0.0.0/0 > Set Target tags > Set specifed protocols and port on TCP 5000 (Because we set flask running on port 5000)
